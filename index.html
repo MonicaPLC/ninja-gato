@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    />
+    <link rel="stylesheet" href="ng.css">
+        <title>De Ninja a Gato</title>
+
+<body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+<img src="img/cat0.png"  data-alt-src ="img/ninja0.png">
+<img src="img/cat1.png"  data-alt-src ="img/ninja1.png">
+<img src="img/ninja2.png"  data-alt-src ="img/cat2.png">
+<img src="img/ninja3.png"  data-alt-src ="img/cat3.png">
+<img src="img/ninja4.png"  data-alt-src ="img/cat4.png">
+
+
+
+<script>
+  $(document).ready(function () {
+
+    $('img').on("click",function() {
+
+      // primero vamos a traernos los valores
+      var src = $(this).attr('src');
+      var data= $(this).attr('data-alt-src');
+
+      // después vamos a cambiar estos valores
+
+      $(this).attr('src', data);
+      $(this).attr('data-alt-src', src);
+
+    });
+
+
+  });
+
+</script>
+
+
+
+  
+</body>  
+ 
+</html>
