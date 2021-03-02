@@ -1,48 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    />
-    <link rel="stylesheet" href="ng.css">
-        <title>De Ninja a Gato</title>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="estilos.css">
+  <title>De Ninja a Gato</title>
 
 <body>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  
-<img src="img/cat0.png"  data-alt-src ="img/ninja0.png">
-<img src="img/cat1.png"  data-alt-src ="img/ninja1.png">
-<img src="img/ninja2.png"  data-alt-src ="img/cat2.png">
-<img src="img/ninja3.png"  data-alt-src ="img/cat3.png">
-<img src="img/ninja4.png"  data-alt-src ="img/cat4.png">
+
+  <div id="titulo">
+    <h3>Puzzle de Gato a Ninja</h3>
+  </div>
+
+  <div class="container">
+
+    <img src="img/cat0.png" data-alt-src="img/ninja0.png">
+    <img src="img/cat1.png" data-alt-src="img/ninja1.png">
+    <img src="img/ninja2.png" data-alt-src="img/cat2.png">
+    <img src="img/ninja3.png" data-alt-src="img/cat3.png">
+    <img src="img/ninja4.png" data-alt-src="img/cat4.png">
+  </div>
 
 
+  <script>
+    $(document).ready(function () {
 
-<script>
-  $(document).ready(function () {
+      $('img').on("click", function () {
 
-    $('img').on("click",function() {
+        // primero vamos a traernos los valores
+        var src = $(this).attr('src');
+        var data = $(this).attr('data-alt-src');
 
-      // primero vamos a traernos los valores
-      var src = $(this).attr('src');
-      var data= $(this).attr('data-alt-src');
+        // después vamos a cambiar estos valores
 
-      // después vamos a cambiar estos valores
+        $(this).attr('src', data);
+        $(this).attr('data-alt-src', src);
 
-      $(this).attr('src', data);
-      $(this).attr('data-alt-src', src);
+      });
+
 
     });
 
-
-  });
-
-</script>
+  </script>
 
 
 
-  
-</body>  
- 
+
+</body>
+
 </html>

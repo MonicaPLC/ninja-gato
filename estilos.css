@@ -1,0 +1,28 @@
+img {
+  display: block;
+}
+
+.container {
+  margin: auto;
+  width: 300px;
+  height: 400px;
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 100px;
+  padding: 50px;
+  margin-bottom: 20px;
+  border: 20px double coral;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: black;
+  font-family: lucida handwriting;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+body {
+  background-image: url(img/fondo.png);
+}
